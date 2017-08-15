@@ -77,7 +77,7 @@ defmodule XDoc do
 
   def xpath(nil, _), do: []
   def xpath(node, path), do: xpath(node, path, [])
-  def xpath(node, path, opts), do: :xmerl_xpath.string(to_char_list(path), node, opts)
+  def xpath(node, path, opts), do: :xmerl_xpath.string(to_charlist(path), node, opts)
 
   defp parse_integer(value) do
     {integer, _} = Integer.parse(value)
